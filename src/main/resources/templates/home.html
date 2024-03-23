@@ -1,0 +1,35 @@
+<!Doctype html>
+<html  xmlns="http://www.w3.org/1999/xhml" xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<title>Home</title>
+	</head>
+	<body>
+		<h2>Welcome to Home application </h2>
+
+
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Prenom </th>
+					<th>Nom </th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:if="${employees.empty}">
+					<td>Aucun employee en base de données</td>								
+				 </tr>
+				<tr th:each= "employe: ${employees}">
+					<td><span th:text=" ${employe.firstName}" >Prenom</span></td>
+					<td><span th:text=" ${employe.lastName}" >Nom</span></td>	
+					<td><a th:href="@{deleteEmployee/{id}(id=${employe.id})}">Supprimer</a></td>			
+				</tr> 
+			</tbody>
+	    </table>  
+	      
+	   
+	
+    </body>	
+</html>
