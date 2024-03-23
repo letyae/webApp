@@ -1,4 +1,6 @@
 # webApp
+#Spring Boot
+#Java 17
 Création d'une application web avec spring boot pour   gérer les employés d'un service RH, et  qui communique avec une api.
 
 -afficher la liste des employées après récupération  via une api
