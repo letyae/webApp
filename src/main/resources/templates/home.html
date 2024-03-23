@@ -3,7 +3,16 @@
 	
 	<head>
 		<title>Home</title>
+		 <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+			
 	</head>
+	
+	
+	
 	<body>
 		<h2>Welcome to Home application </h2>
 
@@ -13,6 +22,7 @@
 			<thead>
 				<tr>
 					<th>Prenom </th>
+					
 					<th>Nom </th>
 				</tr>
 			</thead>
@@ -24,7 +34,8 @@
 				<tr th:each= "employe: ${employees}">
 					<td><span th:text=" ${employe.firstName}" >Prenom</span></td>
 					<td><span th:text=" ${employe.lastName}" >Nom</span></td>	
-					<td><a th:href="@{deleteEmployee/{id}(id=${employe.id})}">Supprimer</a></td>			
+					<!--<td><a th:href="@{deleteEmployee/{id}(id=${employe.id})}">Supprimer</a></td> -->
+					<td><a th:href="@{deleteEmployee/{id}(id=${employe.id})}" class="btn btn-danger"  role="button">Supprimer</a>	</td>
 				</tr> 
 			</tbody>
 	    </table>  
