@@ -18,6 +18,6 @@ public class WebAppApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String...  args) throws Exception {
-		//System.out.println(props.getApiUrl());	
+		System.out.println(props.getApiUrl());	
 	}
 }
